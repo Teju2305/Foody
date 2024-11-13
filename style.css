@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #a9f1df, #ffbbbb);
+  height: 80px;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-bar img {
+  height: 60px;
+}
+
+.nav-bar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-bar li {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+}
+
+.nav-bar li:hover {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #fbacac;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-bar {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-bar li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    margin: 5px 0;
+  }
+
+  .nav-bar a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  .nav-bar img {
+    height: 50px;
+  }
+
+  .nav-bar li {
+    font-size: 18px;
+  }
+
+  .nav-bar a {
+    padding: 10px;
+  }
+}
+
+/* carousel */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden;
+  height: 500px;
+}
+
+.carousel-images {
+  display: flex;
+  animation: slide 20s infinite;
+  width: 100%;
+  height: 600px;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  margin: 20px;
+  padding: 30px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-900px * 3));
+  }
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-40%);
+  display: flex;
+}
+
+.carousel-indicators div {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.carousel-indicators .active {
+  background-color: gray;
+}
+
+/* List of items*/
+.list h2 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(7, 128, 75);
+  margin-bottom: 20px;
+}
+
+.cards {
+  margin: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 250px;
+  height: fit-content;
+  box-shadow: -2px -3px 2px 5px #9abbf0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  border-radius: 15px;
+  border: 5px solid rgb(82, 82, 235);
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.para {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    margin: 0 20px;
+    gap: 20px;
+  }
+
+  .card {
+    max-width: 200px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .list h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    margin: 0 10px;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .list h2 {
+    font-size: 30px;
+  }
+}
+
+/* Good Customer */
+
+.customer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card1 {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px rgba(33, 198, 44, 0.2);
+  margin: 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  overflow: hidden;
+  text-align: left;
+  padding: 15px;
+}
+
+.card1 h3 {
+  margin: 0 0 10px;
+}
+
+.card1 .ratings {
+  color: gold;
+  font-size: 16px;
+}
+
+.card1 p {
+  color: #777;
+  font-size: 14px;
+}
+
+.card1 .customer-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* footer*/
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-media a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-section {
+  background: linear-gradient(to right, #a9f1df, #ffbbbb);
+  line-height: 28px;
+}

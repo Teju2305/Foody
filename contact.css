@@ -1,0 +1,79 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0%;
+  padding: 0%;
+  background-image: url("images/contact-img.jpg"); /* Replace with your background image URL */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #f8f6f6;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-left: 700px;
+  color: white;
+}
+
+header img {
+  max-width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-left: 600px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-container h2 {
+  margin-top: 0%;
+  color: rgb(13, 233, 50);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+
+  border-radius: 5px;
+}
+
+.submit-btn {
+  color: white;
+  border: 2px solid green;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info strong {
+  display: block;
+  color: rgb(145, 225, 156);
+}
